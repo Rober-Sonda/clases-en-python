@@ -24,7 +24,12 @@ class Knight(Player):
   poder = "Exori"
   vocacion = "Knight"
   speed = "1700"
+  
+  
+  def lanzar_poder(self):
+    return "{} y Double Blade".format(self.poder)
 
+  
 class Sorcerer(Player):
   poder = "Te reviento"
   vocacion = "Sorcerer"
@@ -39,3 +44,6 @@ class Paladin(Player):
   poder = "Espadium al Medium"
   vocacion ="Paladin"
   speed = "te re parto al diome 2900"
+
+  def lanzar_poder(self):
+    return "{} y Double Axe".format(self.poder)
