@@ -3,15 +3,18 @@ class Player:
   vocacion = "No posee"
   speed = "1000"
 
-  def __init__(self, vida=18,mana=0):
-    self.vida = vida
-    self.mana = mana
+  def __init__(self, **kwargs):
+    self.nombre = input("Elije un nombre -> ")
+    self.vida = kwargs.get("vida", 50)
+    self.mana = kwargs.get("mana", 50)
   
   def __str__(self):
-    return ("vida : {}\nmana : {}\nvocacion : {}\npoder : {}".format(self.vida,
-                                                                     self.mana,
-                                                                     self.vocacion,
-                                                                     self.lanzar_poder()))
+    return ("Nombre: {}\nvida : {}\nmana : {}\nvocacion : {}\npoder : {}".format(
+            self.nombre,
+            self.vida,
+            self.mana,
+            self.vocacion,
+            self.lanzar_poder()))
 
   def lanzar_poder(self):
     return self.poder
